@@ -1,3 +1,15 @@
+# Project specific
+.vs/
+*.pdf
+data.csv
+test.csv
+localsound.*
+main.ipynb
+run.txt
+vggss.json
+vggss_mini*
+data/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
