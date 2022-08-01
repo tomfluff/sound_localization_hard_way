@@ -12,12 +12,12 @@
     - [Adjusted Weights](#adjusted-weights)
     - [Key Differences From Original Paper](#key-differences-from-original-paper)
   - [Results](#results)
-    - [1. Image 1 prediction A vs B](#1-image-1-prediction-a-vs-b)
-    - [2. Image 2 prediction A vs B](#2-image-2-prediction-a-vs-b)
-    - [3. Image 3 prediction A vs B](#3-image-3-prediction-a-vs-b)
-    - [4. Image 4 prediction A vs B](#4-image-4-prediction-a-vs-b)
-    - [5. Image 5 prediction A vs B](#5-image-5-prediction-a-vs-b)
-    - [6. Image 6 prediction A vs B](#6-image-6-prediction-a-vs-b)
+    - [Image 1 prediction A vs B](#image-1-prediction-a-vs-b)
+    - [Image 2 prediction A vs B](#image-2-prediction-a-vs-b)
+    - [Image 3 prediction A vs B](#image-3-prediction-a-vs-b)
+    - [Image 4 prediction A vs B](#image-4-prediction-a-vs-b)
+    - [Image 5 prediction A vs B](#image-5-prediction-a-vs-b)
+    - [Image 6 prediction A vs B](#image-6-prediction-a-vs-b)
   - [Conclusion](#conclusion)
   - [References](#references)
 
@@ -210,37 +210,37 @@ From left to right: original image, full heatmap, strongly positive heatmap, cli
 
 **Note:** these test images were not part of the training data of the algorithm.
 
-### 1. Image 1 prediction A vs B
+### Image 1 prediction A vs B
 
 ![](images/fig_008_0.png)
 
 ![](images/fig_008_9.png)
 
-### 2. Image 2 prediction A vs B
+### Image 2 prediction A vs B
 
 ![](images/fig_009_0.png)
 
 ![](images/fig_009_9.png)
 
-### 3. Image 3 prediction A vs B
+### Image 3 prediction A vs B
 
 ![](images/fig_010_0.png)
 
 ![](images/fig_010_9.png)
 
-### 4. Image 4 prediction A vs B
+### Image 4 prediction A vs B
 
 ![](images/fig_011_0.png)
 
 ![](images/fig_011_9.png)
 
-### 5. Image 5 prediction A vs B
+### Image 5 prediction A vs B
 
 ![](images/fig_012_0.png)
 
 ![](images/fig_012_9.png)
 
-### 6. Image 6 prediction A vs B
+### Image 6 prediction A vs B
 
 ![](images/fig_013_0.png)
 

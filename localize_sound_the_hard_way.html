@@ -1394,11 +1394,12 @@
             line-height: 1.6;
             background-color: gainsboro;
         }
+
         #main-section {
             max-width: 900px;
             margin: auto;
             background-color: white;
-            padding:2em;
+            padding: 2em;
         }
     </style>
     <style>
@@ -1417,7 +1418,6 @@
 <body class="vscode-body vscode-light">
     <div id="main-section">
         <h1 id="localizing-visual-sounds-the-hard-way">Localizing Visual Sounds the Hard Way</h1>
-
         <ul>
             <li><a href="#localizing-visual-sounds-the-hard-way">Localizing Visual Sounds the Hard Way</a>
                 <ul>
@@ -1441,12 +1441,12 @@
                     </li>
                     <li><a href="#results">Results</a>
                         <ul>
-                            <li><a href="#1-image-1-prediction-a-vs-b">1. Image 1 prediction A vs B</a></li>
-                            <li><a href="#2-image-2-prediction-a-vs-b">2. Image 2 prediction A vs B</a></li>
-                            <li><a href="#3-image-3-prediction-a-vs-b">3. Image 3 prediction A vs B</a></li>
-                            <li><a href="#4-image-4-prediction-a-vs-b">4. Image 4 prediction A vs B</a></li>
-                            <li><a href="#5-image-5-prediction-a-vs-b">5. Image 5 prediction A vs B</a></li>
-                            <li><a href="#6-image-6-prediction-a-vs-b">6. Image 6 prediction A vs B</a></li>
+                            <li><a href="#image-1-prediction-a-vs-b">Image 1 prediction A vs B</a></li>
+                            <li><a href="#image-2-prediction-a-vs-b">Image 2 prediction A vs B</a></li>
+                            <li><a href="#image-3-prediction-a-vs-b">Image 3 prediction A vs B</a></li>
+                            <li><a href="#image-4-prediction-a-vs-b">Image 4 prediction A vs B</a></li>
+                            <li><a href="#image-5-prediction-a-vs-b">Image 5 prediction A vs B</a></li>
+                            <li><a href="#image-6-prediction-a-vs-b">Image 6 prediction A vs B</a></li>
                         </ul>
                     </li>
                     <li><a href="#conclusion">Conclusion</a></li>
@@ -1457,11 +1457,9 @@
         <h2 id="about">About</h2>
         <p>A Keras based implementation of the paper <a href="https://ieeexplore.ieee.org/document/9578770">Localizing
                 Visual Sounds the Hard Way</a> which appeared in CVPR2021. In this paper the authors take into account
-            the
-            uncertainty aspects in contrastive learning. The paper attempts to solve the sound localization in a self
-            supervised way with a special loss function which takes into account the uncertain area around the object
-            which
-            emits sound.</p>
+            the uncertainty aspects in contrastive learning. The paper attempts to solve the sound localization in a
+            self supervised way with a special loss function which takes into account the uncertain area around the
+            object which emits sound.</p>
         <p>The <strong>GitHub repository</strong> is available here: <a
                 href="https://github.com/tomfluff/sound_localization_hard_way">github.com/tomfluff/sound_localization_hard_way</a>
         </p>
@@ -1470,22 +1468,14 @@
             <p>The objective of this work is to localize sound sources that are visible in a video without using manual
                 annotations. Our key technical contribution is to show that, by training the network to explicitly
                 discriminate challenging image fragments, even for images that do contain the object emitting the sound,
-                we
-                can significantly boost the localization performance. We do so elegantly by introducing a mechanism to
-                mine
-                hard samples and add them to a contrastive learning formulation automatically. We show that our
-                algorithm
-                achieves state-of-the-art performance on the popular Flickr SoundNet dataset. Furthermore, we introduce
-                the
-                VGG-Sound Source (VGG-SS) benchmark, a new set of annotations for the recently-introduced VGG-Sound
-                dataset,
-                where the sound sources visible in each video clip are explicitly marked with bounding box annotations.
-                This
-                dataset is 20 times larger than analogous existing ones, contains 5K videos spanning over 200
-                categories,
-                and, differently from Flickr SoundNet, is video-based. On VGG-SS, we also show that our algorithm
-                achieves
-                state-of-the-art performance against several baselines.</p>
+                we can significantly boost the localization performance. We do so elegantly by introducing a mechanism
+                to mine hard samples and add them to a contrastive learning formulation automatically. We show that our
+                algorithm achieves state-of-the-art performance on the popular Flickr SoundNet dataset. Furthermore, we
+                introduce the VGG-Sound Source (VGG-SS) benchmark, a new set of annotations for the recently-introduced
+                VGG-Sound dataset, where the sound sources visible in each video clip are explicitly marked with
+                bounding box annotations. This dataset is 20 times larger than analogous existing ones, contains 5K
+                videos spanning over 200 categories, and, differently from Flickr SoundNet, is video-based. On VGG-SS,
+                we also show that our algorithm achieves state-of-the-art performance against several baselines.</p>
         </blockquote>
         <h2 id="importance-in-context">Importance in Context</h2>
         <p>This paper has introduced two key elements:</p>
@@ -1494,13 +1484,11 @@
             <li>A new benchmark dataset VGG-SS (annotated) for the problem of sound localization.</li>
         </ol>
         <p>The problem of sound localization is complicated. In a supervised setting the lack of correctly annotated
-            data
-            creates an issue of achieving high accuracy results. So the idea of self-supervised could prove the
-            important in
-            that context. Up to the publication of this paper, the contrastive nature of self-supervised learning on
-            this
-            problem has used the obvious approach of contrasting an image-sound pair with the other samples (when <span
-                class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+            data creates an issue of achieving high accuracy results. So the idea of self-supervised could prove the
+            important in that context. Up to the publication of this paper, the contrastive nature of self-supervised
+            learning on this problem has used the obvious approach of contrasting an image-sound pair with the other
+            samples (when <span class="katex"><span class="katex-mathml"><math
+                        xmlns="http://www.w3.org/1998/Math/MathML">
                         <semantics>
                             <mrow>
                                 <mi>i</mi>
@@ -1523,21 +1511,20 @@
                             style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal"
                             style="margin-right:0.05724em;">j</span></span></span></span>).</p>
         <p>This paper introduces a new type of thinking which is inspired by the trimap concept. A sound source in an
-            image
-            could be divided into three parts:</p>
+            image could be divided into three parts:</p>
         <ol>
             <li>The firmly positive part</li>
             <li>The uncertain region</li>
             <li>The firmly unrelated part (background)</li>
         </ol>
-        <p><img src="images\fig_001.png" alt="Fig.1. understanding the image section in sound localization"></p>
+        <p><img src="images\fig_001.png"
+                alt="Fig.1. understanding the image section in sound localization"></p>
         <p>The authors of this paper choose to utilize this division and model a loss function which takes into account
-            both
-            the easy negative part (the background) and the hard negative part (uncertain region). The term hard is used
-            to
-            describe the <em>hard to decide</em> sort of notion.</p>
+            both the easy negative part (the background) and the hard negative part (uncertain region). The term hard is
+            used to describe the <em>hard to decide</em> sort of notion.</p>
         <p>The definition of the loss as it appears in the paper is constructed in several parts:</p>
-        <p><img src="images\fig_002.png" alt="Fig.2. combined image-audio correlation variable"></p>
+        <p><img src="images\fig_002.png"
+                alt="Fig.2. combined image-audio correlation variable"></p>
         <p>Here <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
                         <semantics>
                             <mrow>
@@ -1568,7 +1555,8 @@
                                             class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
                                             style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span>
             represents the image-audio correlation matrix.</p>
-        <p><img src="images\fig_003.png" alt="Fig.3. positive and negative part of the reinforcement data"></p>
+        <p><img src="images\fig_003.png"
+                alt="Fig.3. positive and negative part of the reinforcement data"></p>
         <p>Here we see the positive and negative parts of the reinforment data where <span class="katex"><span
                     class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
                         <semantics>
@@ -1592,7 +1580,8 @@
                                             class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
                                             style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>
             is the pseudo-ground-truth mask.</p>
-        <p><img src="images\fig_004.png" alt="Fig.4. the loss function"></p>
+        <p><img src="images\fig_004.png"
+                alt="Fig.4. the loss function"></p>
         <p>Here we can see the loss function itself, where <span class="katex"><span class="katex-mathml"><math
                         xmlns="http://www.w3.org/1998/Math/MathML">
                         <semantics>
@@ -1605,7 +1594,8 @@
                             style="height:0.6944em;"></span><span class="mord mathnormal"
                             style="margin-right:0.03148em;">k</span></span></span></span> is the number of images.</p>
         <p>And when putting it all together we get the following complete picture:</p>
-        <p><img src="images\fig_005.png" alt="Fig.5. the full view of the loss structure"></p>
+        <p><img src="images\fig_005.png"
+                alt="Fig.5. the full view of the loss structure"></p>
         <p>This allows the generation of the trimap as well where we have the positive region <span class="katex"><span
                     class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
                         <semantics>
@@ -1660,31 +1650,25 @@
                                             class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
                                             style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>
             and the background.</p>
-        <p><img src="images\fig_006.png" alt="Fig.6. the trimap structure over several images"></p>
+        <p><img src="images\fig_006.png"
+                alt="Fig.6. the trimap structure over several images"></p>
         <h2 id="implementation">Implementation</h2>
         <h3 id="installation">Installation</h3>
         <p>Both a <code>conda</code> compatible <code>environment.yml</code> file is supplied as well as a
-            <code>pip</code>
-            installation <code>requirements.txt</code> file (python version is 3.9.13). Moreover it is crucial to
-            correctly
-            install the requiorements for Tensorflow v2 from the <a href="https://www.tensorflow.org/install">official
-                page</a>, and optionally install the pytorch requirements <a
-                href="https://pytorch.org/get-started/locally/">from here</a> to run the <code>resnet18.py</code> file
-            for
-            ResNet-18 generation.</p>
+            <code>pip</code> installation <code>requirements.txt</code> file (python version is 3.9.13). Moreover it is
+            crucial to correctly install the requiorements for Tensorflow v2 from the <a
+                href="https://www.tensorflow.org/install">official page</a>, and optionally install the pytorch
+            requirements <a href="https://pytorch.org/get-started/locally/">from here</a> to run the
+            <code>resnet18.py</code> file for ResNet-18 generation.</p>
         <h3 id="dataset">Dataset</h3>
         <p>For testing and implementation purposes I worked using the unlabeled part of the introduced VGG-SS dataset. I
-            did
-            so using a custom script to download video sections from YouTube, extract a 3 second audio-video pair (from
-            the
-            middle of the VGG-SS video). As well as extracted the middle frame of the video sample to use in my
-            implementation. All as mentioned in the paper.</p>
+            did so using a custom script to download video sections from YouTube, extract a 3 second audio-video pair
+            (from the middle of the VGG-SS video). As well as extracted the middle frame of the video sample to use in
+            my implementation. All as mentioned in the paper.</p>
         <p>The scripot <code>vggss_dl.py</code> takes care of that part. But is reliant on the existence of
             <code>&quot;vggss.json&quot;</code> file which can be downloaded from <a
                 href="https://www.robots.ox.ac.uk/~vgg/research/lvs/data/vggss.json">here</a>. Also, it is requierd to
-            have
-            <a href="https://ffmpeg.org/">FFMPEG</a> installed on your system.
-        </p>
+            have <a href="https://ffmpeg.org/">FFMPEG</a> installed on your system.</p>
         <p>All downloaded assets need to be placed accordingly in the following directory structure:</p>
         <pre><code><code><div>data
 │   image_01.jpg
@@ -1696,24 +1680,20 @@
         <h3 id="resnet-18">ResNet-18</h3>
         <p>In order to implement this network architecture there was aneed to implement a ResNet-18 as well as include
             pretrained weights (of the imagenet dataset) as a start for the vision part of the implementation. Sadly,
-            for
-            some unknown reason, Keras does not include an implementation of ResNet-18/36, but only ResNet-50/100.</p>
+            for some unknown reason, Keras does not include an implementation of ResNet-18/36, but only ResNet-50/100.
+        </p>
         <p>Therefore, there was a need to generate the ResNet-18 itself. As well as import the pretrained weights. With
-            the
-            help of <a href="https://dmolony3.github.io/Pytorch-to-Tensorflow.html">this article</a> I was able to
-            generate
-            an accurate ResNet as well as import and save pytorch pretrained weights on the Keras model. A detailed
-            breakdown and full model available in <code>resnet18.py</code>.</p>
+            the help of <a href="https://dmolony3.github.io/Pytorch-to-Tensorflow.html">this article</a> I was able to
+            generate an accurate ResNet as well as import and save pytorch pretrained weights on the Keras model. A
+            detailed breakdown and full model available in <code>resnet18.py</code>.</p>
         <p>For this network architecture it was needed to ignore the top-part of the ResNet. The pretrained weights
             (<code>imagenet.resnet18.h5</code>) used a top-less architecture. And the corresponding code is in
-            <code>model.py</code>.
-        </p>
+            <code>model.py</code>.</p>
         <h3 id="loss-function">Loss Function</h3>
         <p>The core of this paper was the newly defined loss function which takes advantage of the
-            &quot;background&quot; of
-            the image (frame) as well as other pictures as negatives. By taking the output of the two ResNet models
-            (vision
-            and audio), and computing the correlation or misscorrelation between the two the loss is calculated.</p>
+            &quot;background&quot; of the image (frame) as well as other pictures as negatives. By taking the output of
+            the two ResNet models (vision and audio), and computing the correlation or misscorrelation between the two
+            the loss is calculated.</p>
         <p>The loss calculation itself is divided into two sections, the first calculates the learning variables and the
             second uses these to calculate the loss itself.</p>
         <pre><code class="language-python"><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__calc_reinforcement</span>(<span class="hljs-params">self, frame, audio</span>):</span>
@@ -1748,17 +1728,13 @@
 </div></code></pre>
         <h3 id="forwards-pass">Forwards Pass</h3>
         <p>The architecture of the forward pass is relatively straight-forward. Input image (frame) and audio is fed
-            into
-            the model, each passed on a respective ResNet-18. The image passed on a ResNet-18 pretrained on
+            into the model, each passed on a respective ResNet-18. The image passed on a ResNet-18 pretrained on
             <code>imagenet</code> weights, and the audio on an untrained ResNet-18. These will generate our encoding of
-            the
-            image and the audio inputs.
-        </p>
+            the image and the audio inputs.</p>
         <p>Using the information from the two ResNets we calculate the reinforcement parameters as well as the loss.
-            This is
-            also done in two parts because of the way Keras works. with <code>call()</code> we handle the forward pass,
-            and
-            with <code>train_step()</code> we handle the full flow as well as the loss calculation.</p>
+            This is also done in two parts because of the way Keras works. with <code>call()</code> we handle the
+            forward pass, and with <code>train_step()</code> we handle the full flow as well as the loss calculation.
+        </p>
         <pre><code class="language-python"><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">call</span>(<span class="hljs-params">self, inputs, training=<span class="hljs-literal">None</span>, mask=<span class="hljs-literal">None</span></span>):</span>
     frame_in, audio_in = inputs
     <span class="hljs-comment"># frame</span>
@@ -1793,9 +1769,8 @@
 </div></code></pre>
         <h3 id="adjusted-weights">Adjusted Weights</h3>
         <p>During the operation of the training, we keep track of both the cision and audio ResNet-18 and adjust the
-            weights
-            on these based on out new loss function. This process is fine-tuning the defined ResNets to focus on the key
-            objective which is correlate sound to an object.</p>
+            weights on these based on out new loss function. This process is fine-tuning the defined ResNets to focus on
+            the key objective which is correlate sound to an object.</p>
         <p>This can be seen on this part of the <code>train_step()</code> function:</p>
         <pre><code class="language-python"><div>learnable_params = 
     (
@@ -1899,8 +1874,7 @@
                             </semantics>
                         </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut"
                                 style="height:0.6444em;"></span><span class="mord">6</span></span></span></span> instead
-                of
-                <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
                             <semantics>
                                 <mrow>
                                     <mn>256</mn>
@@ -1909,19 +1883,14 @@
                             </semantics>
                         </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut"
                                 style="height:0.6444em;"></span><span class="mord">256</span></span></span></span> (in
-                the
-                paper)
-            </li>
+                the paper)</li>
         </ol>
         <p>For (1), it seems that because of the lack of ability to process big batches of data, as well as the lack of
-            the
-            quantity of data that the lower learning rate created a situation where the optimizer would move too wuickly
-            at
-            each step.</p>
+            the quantity of data that the lower learning rate created a situation where the optimizer would move too
+            wuickly at each step.</p>
         <p>For (2), it seems that using the regular ResNet-18 architecture as proposed in <a
                 href="https://ieeexplore.ieee.org/document/7780459">Deep Residual Learning for Image Recognition</a> is
-            a
-            tad different than the one used in the paper and that the last layer is not downsampled, which generates a
+            a tad different than the one used in the paper and that the last layer is not downsampled, which generates a
             <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
                         <semantics>
                             <mrow>
@@ -1980,39 +1949,36 @@
                             style="margin-right:0.1667em;"></span><span class="mord">224</span><span
                             class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span
                             class="mord">3</span><span class="mclose">)</span></span></span></span>. So a small
-            adjustment
-            to the image dimensions was implemented.</p>
+            adjustment to the image dimensions was implemented.</p>
         <p>For (3) this stems from the lack of processing power on my end. Better machines could handle better
-            execution.
-        </p>
+            execution.</p>
         <h2 id="results">Results</h2>
         <p>The training was generated over 2700 imahe-audio pairs in 10 parts of 270 pairs, with batch size of 6 and 4
             epochs. Let us see the plot of the loss function over the training sections:</p>
-        <p><img src="images\fig_007.png" alt="Fig.7. the loss over my implementation"></p>
+        <p><img src="images\fig_007.png"
+                alt="Fig.7. the loss over my implementation"></p>
         <p>And let us also examine some results. The results are presented in two timepoints, after part 1 of the
-            training
-            (4 epochs) and after part 10 of the training (40 epochs). The difference in the results is very visible and
-            the
-            benefit of the proposed methos is clearly noticable. We will refer to part 1 as prediction A and part 10 as
-            prediction B.</p>
+            training (4 epochs) and after part 10 of the training (40 epochs). The difference in the results is very
+            visible and the benefit of the proposed methos is clearly noticable. We will refer to part 1 as prediction A
+            and part 10 as prediction B.</p>
         <p>From left to right: original image, full heatmap, strongly positive heatmap, clipped positive image.</p>
         <p><strong>Note:</strong> these test images were not part of the training data of the algorithm.</p>
-        <h3 id="1-image-1-prediction-a-vs-b">1. Image 1 prediction A vs B</h3>
+        <h3 id="image-1-prediction-a-vs-b">Image 1 prediction A vs B</h3>
         <p><img src="images\fig_008_0.png" alt=""></p>
         <p><img src="images\fig_008_9.png" alt=""></p>
-        <h3 id="2-image-2-prediction-a-vs-b">2. Image 2 prediction A vs B</h3>
+        <h3 id="image-2-prediction-a-vs-b">Image 2 prediction A vs B</h3>
         <p><img src="images\fig_009_0.png" alt=""></p>
         <p><img src="images\fig_009_9.png" alt=""></p>
-        <h3 id="3-image-3-prediction-a-vs-b">3. Image 3 prediction A vs B</h3>
+        <h3 id="image-3-prediction-a-vs-b">Image 3 prediction A vs B</h3>
         <p><img src="images\fig_010_0.png" alt=""></p>
         <p><img src="images\fig_010_9.png" alt=""></p>
-        <h3 id="4-image-4-prediction-a-vs-b">4. Image 4 prediction A vs B</h3>
+        <h3 id="image-4-prediction-a-vs-b">Image 4 prediction A vs B</h3>
         <p><img src="images\fig_011_0.png" alt=""></p>
         <p><img src="images\fig_011_9.png" alt=""></p>
-        <h3 id="5-image-5-prediction-a-vs-b">5. Image 5 prediction A vs B</h3>
+        <h3 id="image-5-prediction-a-vs-b">Image 5 prediction A vs B</h3>
         <p><img src="images\fig_012_0.png" alt=""></p>
         <p><img src="images\fig_012_9.png" alt=""></p>
-        <h3 id="6-image-6-prediction-a-vs-b">6. Image 6 prediction A vs B</h3>
+        <h3 id="image-6-prediction-a-vs-b">Image 6 prediction A vs B</h3>
         <p><img src="images\fig_013_0.png" alt=""></p>
         <p><img src="images\fig_013_9.png" alt=""></p>
         <h2 id="conclusion">Conclusion</h2>
